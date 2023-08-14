@@ -64,6 +64,45 @@ docker run -p 8080:8080 universalresolver/driver-did-weid
 curl -X GET http://localhost:8080/1.0/identifiers/did:weid:iot:0x772b4982bebc911b66cf0793de3efe463e442af8
 ```
 
+## Resolution Resulte Example
+
+```json
+{
+  "@context": "https://w3id.org/did-resolution/v1",
+  "didDocument": {
+    "@context": "https://github.com/WeBankFinTech/WeIdentity/blob/master/context/v1",
+    "id": "did:weid:iot:0x772b4982bebc911b66cf0793de3efe463e442af8",
+    "authentication": [
+      {
+        "type": "SM2VerificationKey",
+        "id": "did:weid:iot:0x772b4982bebc911b66cf0793de3efe463e442af8#keys-2a8ee6ba",
+        "controller": "did:weid:iot:0x772b4982bebc911b66cf0793de3efe463e442af8",
+        "publicKeyMultibase": "z5rfyeaTovNZjGnJsixwHXgWTKPLhTwFJWYYAMGGpLAmDKaz7N6N5NUZouLzsP1Nx55tsTgEYtwuUsmr7FWnarpGvsCHhKarmWD9J1J8oLJDgcvDqpN5dqmt3CeF5wAcwtCt8dR5oGjEpxgjth6rrdr5hqw6Gm4ajk4gydje3vwBndo3XrFGEpQgxtGg2tE8HtHUDMAbu1X75LS4M8f3u1",
+        "publicKey": "1309054680743461058038787313867871763266074183195852350126078860483253384655447103358465251710948485441705155847139019374532947750661575547013497376941900"
+      }
+    ],
+    "service": [
+      {
+        "type": "WeIdentity",
+        "id": "did:weid:iot:0x772b4982bebc911b66cf0793de3efe463e442af8#c2b7ef07",
+        "serviceEndpoint": "https://github.com/WeBankBlockchain/WeIdentity"
+      }
+    ]
+  },
+  "didResolutionMetadata": {
+    "contentType": "application/did+ld+json",
+    "error": null,
+    "transactionInfo": null
+  },
+  "didDocumentMetadata": {
+    "created": null,
+    "updated": null,
+    "deactivated": false,
+    "versionId": 1
+  }
+}
+```
+
 ## Driver Variables
 
 Following the
